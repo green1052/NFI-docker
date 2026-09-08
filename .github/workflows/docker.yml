@@ -33,10 +33,14 @@ jobs:
             - name: Build & Push
               uses: docker/build-push-action@v7
               with:
-                  platforms: linux/amd64,linux/arm64
+                  platforms: linux/amd64, linux/arm64
                   push: true
                   tags: |
                       ghcr.io/green1052/nfi:latest
-                      ghcr.io/green1052/nfi:${{ github.run_number }}
                   cache-from: type=gha
                   cache-to: type=gha,mode=max
+                  
+            - uses: dataaxiom/ghcr-cleanup-action@v1
+              with:
+                  exclude-tags: latest
+            
