@@ -42,5 +42,6 @@ jobs:
                   
             - uses: dataaxiom/ghcr-cleanup-action@v1
               with:
+                  packages: green1052/nfi
                   exclude-tags: latest
             
