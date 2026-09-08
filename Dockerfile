@@ -20,4 +20,4 @@ COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/configs/pairli
 COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/configs/blacklist-binance.json /freqtrade/configs/blacklist-binance.json
 COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/configs/exampleconfig.json /freqtrade/configs/exampleconfig.json
 COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/configs/exampleconfig_secret.json /freqtrade/configs/exampleconfig_secret.json
-COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/NostalgiaForInfinityX7.py /freqtrade/NostalgiaForInfinityX7.py
+COPY --from=clone --chown=ftuser:ftuser /tmp/NostalgiaForInfinity/NostalgiaForInfinityX8.py /freqtrade/NostalgiaForInfinityX8.py
