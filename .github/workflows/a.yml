@@ -1,0 +1,21 @@
+name: Docker
+
+on:
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    packages: write
+
+env:
+    IMAGE_NAME: ghcr.io/${{ github.repository }}
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - uses: dataaxiom/ghcr-cleanup-action@v1
+              with:
+                  packages: green1052/nfi
+                  exclude-tags: latest
