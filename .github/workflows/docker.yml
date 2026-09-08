@@ -42,6 +42,7 @@ jobs:
                   
             - uses: dataaxiom/ghcr-cleanup-action@v1
               with:
-                  packages: green1052/nfi
+                  packages: nfi
                   exclude-tags: latest
-            
+                  delete-untagged: true
+                  keep-n-tagged: 1
