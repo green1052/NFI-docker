@@ -19,3 +19,5 @@ jobs:
               with:
                   packages: nfi
                   exclude-tags: latest
+                  delete-untagged: true
+                  keep-n-tagged: 1
